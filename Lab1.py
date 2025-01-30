@@ -30,13 +30,13 @@ for i in range(n, 0, -1):
 #2.2
 for i in range(n, 0, -1):
     spaces = " " * (n - i)
-    left_part = ""
+    leftpart = ""
     for j in range(i, 0, -1):
-        left_part += str(j)
-    right_part = ""
+        leftpart += str(j)
+    rightpart = ""
     for j in range(2, i + 1):
-        right_part += str(j)
-    string = left_part + right_part
+        rightpart += str(j)
+    string = leftpart + rightpart
     print(spaces + string)
 #3
 triangle = [[1]]
