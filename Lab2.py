@@ -1,46 +1,46 @@
-# s = input()
+s = input()
 #1
-# s2 = ''
-# symbols = []
-# digits = []
-# c = 0
-# for i in s:
-#     if i not in symbols:
-#         symbols.append(i)
-# for i in symbols:
-#     if s.count(i) == 1:
-#         s2 += i
-#     else:
-#         s2 = s2 + i + str(s.count(i))
-# print(s2) 
-# #№1.1
-# s2 = ''
-# for i in range(len(s)-1):
-#     if s[i].isdigit()==False and s[i+1].isdigit() == True:
-#         s2 = s2 + s[i]*int(s[i+1])
-#     elif s[i].isdigit()==False and s[i+1].isdigit() == False:
-#         s2 += s[i]
-# if not s[-1].isdigit():
-#     s2 += s[-1]
-# print(s2)
+s2 = ''
+symbols = []
+digits = []
+c = 0
+for i in s:
+    if i not in symbols:
+        symbols.append(i)
+for i in symbols:
+    if s.count(i) == 1:
+        s2 += i
+    else:
+        s2 = s2 + i + str(s.count(i))
+print(s2) 
+#№1.1
+s2 = ''
+for i in range(len(s)-1):
+    if s[i].isdigit()==False and s[i+1].isdigit() == True:
+        s2 = s2 + s[i]*int(s[i+1])
+    elif s[i].isdigit()==False and s[i+1].isdigit() == False:
+        s2 += s[i]
+if not s[-1].isdigit():
+    s2 += s[-1]
+print(s2)
 
 #№2
-# s = s.replace(' ', '')
+s = s.replace(' ', '')
 
-# char_count = []
-# for i in set(s):
-#     count = s.count(i)
-#     char_count.append((i, count))
+char_count = []
+for i in set(s):
+    count = s.count(i)
+    char_count.append((i, count))
 
-# for i in range(len(char_count)-1):
-#     for j in range(i+1, len(char_count)):
-#         if char_count[i][1] < char_count[j][1]:
-#             temp = char_count[i]
-#             char_count[i] = char_count[j]
-#             char_count[j] = temp
-# n = 3
-# for i in range(n):
-#     print(char_count[i])
+for i in range(len(char_count)-1):
+    for j in range(i+1, len(char_count)):
+        if char_count[i][1] < char_count[j][1]:
+            temp = char_count[i]
+            char_count[i] = char_count[j]
+            char_count[j] = temp
+n = 3
+for i in range(n):
+    print(char_count[i])
 
 #3
 number = int(input())
