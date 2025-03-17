@@ -1,0 +1,5 @@
+ivan ivanov 5
+ekaterina vorontsova 3
+valerya leman 4
+artem kuznetsov 2
+ilya temnikov 1
