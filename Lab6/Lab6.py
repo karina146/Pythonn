@@ -1,16 +1,15 @@
 import json
-import csv
 
-def json_to_csv(json_filename):
+def json_to_csv(json_file):
 
     data = []
-    with open(json_filename, 'r', encoding = "utf-8") as f:
+    with open(json_file, 'r') as f:
         json_data = json.load(f)
         name = list(json_data.keys())[0]
         if isinstance(json_data[name], list):
             data = json_data[name]
-    csv_filename = f"{name}.csv"
-    with open(csv_filename, 'w', encoding = "utf-8") as f:
+    csv_file = f"{name}.csv"
+    with open(csv_file, 'w') as f:
         headers = data[0].keys()
         f.write(','.join(headers) + '\n')
         for i in data:
@@ -19,4 +18,4 @@ def json_to_csv(json_filename):
 
     
 
-json_to_csv('ex1.json')
+json_to_csv("ex2.json")
