@@ -5,10 +5,8 @@ import jsonschema
 with open("error.json", "r") as f:
     data = json.load(f)
 
-
 with open("schema.json", "r") as f:
     schema = json.load(f)
-
 
 try:
     jsonschema.validate(instance = data, schema = schema)

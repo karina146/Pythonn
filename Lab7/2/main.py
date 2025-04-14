@@ -1,15 +1,15 @@
 import json
 
-res_dict = {}
+
+result_dict = {}
 
 with open("ex_2.json", "r") as f:
     data = json.load(f)
 
+for i in data:
+    name = i["name"]
+    phone = i["phoneNumber"]
+    result_dict[name] = phone
 
-for dicts in data:
-    name = dicts["name"]
-    phone = dicts["phoneNumber"]
-    res_dict[name] = phone
 
-
-print(res_dict)
+print(result_dict)
