@@ -3,7 +3,7 @@ import os
 import random
 
 
-filename = 'example_2.5kb.csv'
+filename = 'leads-100.csv'
 
 
 class Csv():
@@ -27,8 +27,9 @@ class Csv():
                 dt.append(self.data[random.randint(0, len(self.data))])
 
         for i in dt:
-            for j in i:
-                print(j, end='\t')
+            print('\t'.join(i))
+                
+                
 
 a = Csv(filename)
 a.Show('top', 5)
