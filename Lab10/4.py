@@ -5,7 +5,7 @@ from matplotlib.widgets import Slider
 
 x = np.linspace(0, 4 * np.pi, 1000)
 fig = plt.figure()
-plt.subplots_adjust(bottom=0.3, hspace=0.7)
+plt.subplots_adjust(bottom=0.3, hspace=0.8)
 
 
 ax1 = plt.subplot(311)
@@ -50,5 +50,6 @@ def update(val):
 
 for slider in [amp_slider1, freq_slider1, amp_slider2, freq_slider2]:
     slider.on_changed(update)
+
 
 plt.show()
